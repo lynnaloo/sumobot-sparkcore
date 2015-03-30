@@ -36,7 +36,7 @@ Do NOT explicitly install npm. If you do so the incompatible npm from the standa
 - Then ```cd sumobot-sparkcore && npm install```
 - Wire up one servo at a time as shown below
 ![alt tag](http://bocoup.com/img/weblog/continuous-calibration-spark.png)
-- Open up ```calibrate.js```and replace ```process.env.SPARK_TOKEN``` with your ```ACCESS_TOKEN```and ```process.env.SPARK_DEVICE_2``` with your ```DEVICE_ID```. Now run ```node calibrate.js``` and adjust the potentiometer until servo comes to a complet stop.
+- Open up ```calibrate.js```and replace ```process.env.SPARK_TOKEN``` with your ```ACCESS_TOKEN``` and ```process.env.SPARK_DEVICE_2``` with your ```DEVICE_ID```. Now run ```node calibrate.js``` and adjust the potentiometer until servo comes to a complet stop. You can find your ```ACCESS_TOKEN``` and ```DEVICE_ID``` in the [spark web ide](https://www.spark.io/build/)
 - Hook up all wires as shown in the schematics below and then open up ```app.js```, add your ```ACCESS_TOKEN``` and  ```DEVICE_ID``` and then run ```node app.js```. Now you should control your sumobot with your arrow keys from the terminal. 
 ![alt tag](http://bocoup.com/img/weblog/sumo-spark-circuit.png)
 
