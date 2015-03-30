@@ -3,7 +3,7 @@ This is a cliff notes version from the [original](http://bocoup.com/weblog/assem
 
 ## Env setup (Ubuntu only)
 
-- Open the terminal application and install node but first make sure to remove other versions as they will not work with the ```spark-cli```. 
+Open the terminal application and install node but first make sure to remove other versions as they will not work with the ```spark-cli```. 
 
 ````
   sudo apt-get remove nodejs npm
@@ -34,7 +34,9 @@ Do NOT explicitly install npm. If you do so the incompatible npm from the standa
 - Install git ```sudo apt-get install git```
 - Clone this repo. ```git clone sumobot-sparkcore```
 - Then ```cd sumobot-sparkcore && npm install```
-- Wire up one servo at a time, run ```node calibrate.js``` and adjust the potentiometer until servo comes to a complet stop.
-- Hook up all wires as shown in the schematics below and then run ```node app.js``` and now you can control your sumobot with your arrow keys from the terminal. 
+- Wire up one servo at a time as shown below
+![alt tag](http://bocoup.com/img/weblog/continuous-calibration-spark.png)
+- Open up ```calibrate.js```and replace ```process.env.SPARK_TOKEN``` with your ```ACCESS_TOKEN```and ```process.env.SPARK_DEVICE_2``` with your ```DEVICE_ID```. Now run ```node calibrate.js``` and adjust the potentiometer until servo comes to a complet stop.
+- Hook up all wires as shown in the schematics below and then open up ```app.js```, add your ```ACCESS_TOKEN``` and  ```DEVICE_ID``` and then run ```node app.js```. Now you should control your sumobot with your arrow keys from the terminal. 
 ![alt tag](http://bocoup.com/img/weblog/sumo-spark-circuit.png)
 
