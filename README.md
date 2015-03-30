@@ -40,3 +40,4 @@ Do NOT explicitly install npm. If you do so the incompatible npm from the standa
 - Hook up all wires as shown in the schematics below and then open up ```app.js```, add your ```ACCESS_TOKEN``` and  ```DEVICE_ID``` and then run ```node app.js```. Now you should control your sumobot with your arrow keys from the terminal. 
 ![alt tag](http://bocoup.com/img/weblog/sumo-spark-circuit.png)
 
+For more info on what any of the colors of your spark mean or help troubleshooting, checkout their excellent [docs](http://docs.spark.io/connect/).
