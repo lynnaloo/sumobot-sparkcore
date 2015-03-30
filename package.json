@@ -1,0 +1,11 @@
+{
+  "name": "spartest",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "johnny-five": "*",
+    "spark-io": "*",
+    "keypress": "~0.2.1",
+    "sumobot": "~0.1.2 "
+  }
+}
