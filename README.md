@@ -31,7 +31,8 @@ Do NOT explicitly install npm. If you do so the incompatible npm from the standa
 - ```spark flash REPLACE_WITH_DEVICE_ID voodoo``` once it breathes cyan you are good.
 
 ## Servo calibration
-- Clone this repo. In your terminal ```git clone sumobot-sparkcore```
+- Install git ```sudo apt-get install git```
+- Clone this repo. ```git clone sumobot-sparkcore```
 - Then ```cd sumobot-sparkcore && npm install```
 - Wire up one servo at a time, run ```node calibrate.js``` and adjust the potentiometer until servo comes to a complet stop.
 - Hook up all wires as shown in the schematics below and then run ```node app.js``` and now you can control your sumobot with your arrow keys from the terminal. 
