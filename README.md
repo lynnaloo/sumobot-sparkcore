@@ -32,7 +32,7 @@ Do NOT explicitly install npm. If you do so the incompatible npm from the standa
 
 ## Servo calibration
 - Install git ```sudo apt-get install git```
-- Clone this repo. ```git clone sumobot-sparkcore```
+- Clone this repo. ```git clone https://github.com/MaxDavila/sumobot-sparkcore.git```
 - Then ```cd sumobot-sparkcore && npm install```
 - Wire up one servo at a time as shown below
 ![alt tag](http://bocoup.com/img/weblog/continuous-calibration-spark.png)
