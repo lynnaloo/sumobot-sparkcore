@@ -28,7 +28,7 @@ Do NOT explicitly install npm. If you do so the incompatible npm from the standa
 - Connect spark and run ```sudo spark setup```
 - Follow prompts, enter SSID, choose 2 for WPA security and then wifi password.
 - Name your core, if it breathes cyan you are good. If not repeat ```spark setup```
-- ```spark flash REPLACE_WITH_DEVICE_ID voodoo``` once it breathes cyan you are good.
+- ```sudo spark flash REPLACE_WITH_DEVICE_ID voodoo``` once it breathes cyan you are good.
 
 ## Servo calibration
 - Install git ```sudo apt-get install git```
