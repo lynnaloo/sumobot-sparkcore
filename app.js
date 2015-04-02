@@ -35,6 +35,8 @@ board.on("ready", function() {
     right: "right",
     space: "stop"
   };
+  
+  var mode;
 
   // Ensure the bot is stopped
   bot.stop();
@@ -60,7 +62,11 @@ board.on("ready", function() {
     }
 
     if (bot[action]) {
+      if (mode === action) {
+        return;
+      }
       bot[action]();
+      mode = action;
     }
   });
 });
