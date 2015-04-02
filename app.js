@@ -2,13 +2,17 @@ var keypress = require("keypress");
 var Spark = require("spark-io");
 var five = require("johnny-five");
 var Sumobot = require("sumobot")(five);
+var dotenv = require('dotenv');
+
+// load the spark token and device id from .env file
+dotenv.load();
 
 keypress(process.stdin);
 
 var board = new five.Board({
   io: new Spark({
     token: process.env.SPARK_TOKEN,
-    deviceId: process.env.SPARK_DEVICE_2
+    deviceId: process.env.SPARK_DEVICE_ID
   })
 });
 
@@ -35,6 +39,8 @@ board.on("ready", function() {
     right: "right",
     space: "stop"
   };
+  
+  var mode;
 
   // Ensure the bot is stopped
   bot.stop();
@@ -54,13 +60,17 @@ board.on("ready", function() {
     action = actions[key.name] || key.name;
 
     if (action == "q") {
-      console.log("Quitting");
+      console.log("Shutting down");
       bot.stop();
       setTimeout(process.exit, 500);
     }
 
     if (bot[action]) {
+      if (mode === action) {
+        return;
+      }
       bot[action]();
+      mode = action;
     }
   });
 });
